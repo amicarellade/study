@@ -1,17 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/GlobalConfigSchema.json",
     "configsList": [
-        "html-demo",
-        "image-demo",
-        "html-input",
-        "survey-demo",
-        "cleveland",
-        "click-accuracy-test",
-        "VLAT-full-randomized",
-        "VLAT-mini-randomized",
-        "MVNV",
-        "brush-interactions",
-        "fairness-jnd"
+        "cleveland copy"
     ],
     "configs": {
         "fairness-jnd": {
@@ -28,6 +18,9 @@
         },
         "cleveland": {
             "path": "cleveland/config-cleveland.json"
+        },
+        "cleveland copy": {
+            "path": "cleveland copy/config-cleveland.json"
         },
         "MVNV": {
             "path": "mvnv/config-html-MVNV.json"
