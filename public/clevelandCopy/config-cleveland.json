@@ -344,6 +344,22 @@
                 }
             ]
         },
+        "TreeMap1":{
+            "baseComponent": "treeMap",
+            "description": "A treeMap with correct answer of 0.33",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    4
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 33
+                }
+            ]
+        },
         "trainingBubbleChart1": {
             "baseComponent": "bubbleChart",
             "description": "A bubble chart with correct answer of 0.66",
@@ -584,6 +600,7 @@
             "consent",
             "training1",
             "trainingTreeMap1",
+            "TreeMap1",
             "trainingBubbleChart1",
             "trainingStackedBarChart1",
             "trainingBarChart1",

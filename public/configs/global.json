@@ -20,7 +20,7 @@
         "cleveland": {
             "path": "cleveland/config-cleveland.json"
         },
-        "cleveland copy": {
+        "clevelandCopy": {
             "path": "clevelandCopy/config-cleveland.json"
         },
         "MVNV": {
