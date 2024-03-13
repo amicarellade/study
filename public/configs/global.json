@@ -1,7 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/GlobalConfigSchema.json",
     "configsList": [
-        "cleveland copy"
+        "cleveland",
+        "clevelandCopy"
     ],
     "configs": {
         "fairness-jnd": {
@@ -20,7 +21,7 @@
             "path": "cleveland/config-cleveland.json"
         },
         "cleveland copy": {
-            "path": "cleveland copy/config-cleveland.json"
+            "path": "clevelandCopy/config-cleveland.json"
         },
         "MVNV": {
             "path": "mvnv/config-html-MVNV.json"

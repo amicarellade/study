@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            fill: none;
+            stroke: black;
+            stroke-width: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+
+    <script>
+        // Extracting data from JSON
+        const data = [
+            { name: "A", value: 30 },
+            { name: "B", value: 40 },
+            { name: "C", value: 50 },
+            { name: "D", value: 40 },
+            { name: "E", value: 60 }
+        ];
+
+        // Chart dimensions
+        const width = 600;
+        const height = 400;
+        const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+
+        // Create SVG element
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Create scales
+        const xScale = d3.scaleBand()
+            .domain(data.map(d => d.name))
+            .range([margin.left, width - margin.right])
+            .padding(0.1);
+
+        const yScale = d3.scaleLinear()
+            .domain([0, 100]) // Adjusted to span to 100
+            .nice()
+            .range([height - margin.bottom, margin.top]);
+
+        // Render bars
+        svg.selectAll("rect")
+            .data(data)
+            .enter().append("rect")
+            .attr("x", d => xScale(d.name))
+            .attr("y", d => yScale(d.value))
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => yScale(0) - yScale(d.value))
+            .attr("class", "bar");
+
+        // Add y-axis
+        svg.append("g")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft(yScale));
+
+    </script>
+</body>
+</html>

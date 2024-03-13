@@ -6,7 +6,7 @@
         "authors": [
             "The reVISit Team + Dante Amicarella + Mason Perham"
         ],
-        "date": "2023-04-28",
+        "date": "2024-03-13",
         "description": "A demo using dynamic React components as stimuli to replicate a Cleveland & McGill graphical perception task (doi:10.1080/01621459.1984.10478080), with a consent form, brief training, a post study survey. Data is collected via form elements in validated fields.",
         "organizations": [
             "University of Utah",
@@ -26,8 +26,8 @@
         "bubbleChart": {
             "description": "A bubble chart with correct answer of 0.66",
             "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
-            "type": "website",
-            "path": "cleveland copy/trainingBubbleChart.html",
+            "type": "react-component",
+            "path": "cleveland/BubbleChart.tsx",
             "parameters": {
                 "data": [
                     {
@@ -226,6 +226,62 @@
             ],
             "nextButtonLocation": "sidebar",
             "instructionLocation": "sidebar"
+        },
+        "treeMap": {
+            "meta": {
+                "difficulty": 5,
+                "chart": "Tree"
+            },
+            "description": "A chart with correct answer of 0.66",
+            "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+            "type": "website",
+            "path": "clevelandCopy/TreeMap.html",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "30"
+                    },
+                    {
+                        "name": "B",
+                        "value": "15"
+                    },
+                    {
+                        "name": "C",
+                        "value": "5"
+                    },
+                    {
+                        "name": "D",
+                        "value": "25"
+                    },
+                    {
+                        "name": "E",
+                        "value": "10"
+                    },
+                    {
+                        "name": "F",
+                        "value": "15"
+                    }
+                ],
+                "selectedIndices": [
+                    0,
+                    5
+                ]
+            },
+            "response": [
+                {
+                    "id": "cm-response",
+                    "prompt": "Answer:",
+                    "required": true,
+                    "location": "sidebar",
+                    "type": "numerical",
+                    "placeholder": "0-100",
+                    "max": 100,
+                    "min": 0
+                }
+            ],
+            "nextButtonLocation": "sidebar",
+            "instructionLocation": "sidebar"
         }
     },
     "components": {
@@ -271,6 +327,22 @@
             "type": "image",
             "path": "cleveland/cm-training.png",
             "response": []
+        },
+        "trainingTreeMap1":{
+            "baseComponent": "treeMap",
+            "description": "A treeMap with correct answer of 0.66",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    5
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 50
+                }
+            ]
         },
         "trainingBubbleChart1": {
             "baseComponent": "bubbleChart",
@@ -511,6 +583,7 @@
             "introduction",
             "consent",
             "training1",
+            "trainingTreeMap1",
             "trainingBubbleChart1",
             "trainingStackedBarChart1",
             "trainingBarChart1",
