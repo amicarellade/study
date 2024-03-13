@@ -344,19 +344,46 @@
                 }
             ]
         },
-        "TreeMap1":{
+        "treeMap1":{
             "baseComponent": "treeMap",
+            "path": "clevelandCopy/retreemap/TreeMap2.html",
             "description": "A treeMap with correct answer of 0.33",
-            "parameters": {
+            "parameters":{
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "30"
+                    },
+                    {
+                        "name": "B",
+                        "value": "15"
+                    },
+                    {
+                        "name": "C",
+                        "value": "5"
+                    },
+                    {
+                        "name": "D",
+                        "value": "25"
+                    },
+                    {
+                        "name": "E",
+                        "value": "10"
+                    },
+                    {
+                        "name": "F",
+                        "value": "15"
+                    }
+                ],
                 "selectedIndices": [
                     0,
-                    4
+                    1
                 ]
             },
             "correctAnswer": [
                 {
                     "id": "cm-response",
-                    "answer": 33
+                    "answer": 50
                 }
             ]
         },
@@ -600,7 +627,7 @@
             "consent",
             "training1",
             "trainingTreeMap1",
-            "TreeMap1",
+            "treeMap1",
             "trainingBubbleChart1",
             "trainingStackedBarChart1",
             "trainingBarChart1",
