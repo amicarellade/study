@@ -27,7 +27,7 @@
             "description": "A bubble chart with correct answer of 0.66",
             "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
             "type": "website",
-            "path": "cleveland/BubbleChart.tsx",
+            "path": "cleveland copy/trainingBubbleChart.html",
             "parameters": {
                 "data": [
                     {
