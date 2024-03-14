@@ -9,8 +9,8 @@
     import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
     document.addEventListener('DOMContentLoaded', () => {
-      const width = 400;
-      const height = 600;
+        const width = 300;
+        const height = 400;
       const topMargin = 40;
       const bottomMargin = 40;
       const leftMargin = 40;
@@ -81,11 +81,6 @@
                   .attr("fill", "black");
         }
       });
-
-      // Add the X Axis
-      svg.append("g")
-              .attr("transform", `translate(0,${height - bottomMargin})`)
-              .call(d3.axisBottom(xScale));
 
       // Add the Y Axis
       svg.append("g")
