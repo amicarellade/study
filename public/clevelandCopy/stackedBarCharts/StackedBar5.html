@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart with Dots on A and F</title>
+    <script type="module">
+      // D3 module import
+      import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const width = 400;
+        const height = 600;
+        const topMargin = 40;
+        const bottomMargin = 40;
+        const leftMargin = 40;
+        const rightMargin = 20;
+
+        // Define your data
+        const x1 = 30;
+        const x2 = 15;
+        const x3 = 5;
+        const x4 = 25;
+        const x5 = 10;
+        const x6 = 15;
+
+        // Single group data
+        const data = [
+          {name: 'A', value: x1},
+          {name: 'B', value: x2},
+          {name: 'C', value: x3},
+          {name: 'D', value: x4},
+          {name: 'E', value: x5},
+          {name: 'F', value: x6}
+        ];
+
+        // Convert data to a stacked format
+        const stackKeys = data.map(d => d.name);
+        const stackedData = d3.stack().keys(stackKeys)([{...data.reduce((acc, cur) => ({...acc, [cur.name]: cur.value}), {})}]);
+
+        // Create the SVG container
+        const svg = d3.select('#container').append('svg')
+          .attr('width', width)
+          .attr('height', height);
+
+        // Set up scales
+        const xScale = d3.scaleBand()
+          .domain(['Total'])
+          .range([leftMargin, width - rightMargin])
+          .padding(0.1);
+
+        const maxY = d3.max(stackedData, layer => d3.max(layer, d => d[1]));
+        const yScale = d3.scaleLinear()
+          .domain([0, maxY])
+          .range([height - bottomMargin, topMargin]);
+
+        // Draw stacked bars
+        svg.selectAll(".layer")
+          .data(stackedData)
+          .join("g")
+          .attr("fill", "white")
+          .attr("stroke", "black")
+          .attr("stroke-width", 2)
+          .selectAll("rect")
+          .data(d => d)
+          .join("rect")
+          .attr("x", d => xScale('Total'))
+          .attr("y", d => yScale(d[1]))
+          .attr("height", d => yScale(d[0]) - yScale(d[1]))
+          .attr("width", xScale.bandwidth());
+
+        // Add dots
+        data.forEach(item => {
+          if (item.name === 'E' || item.name === 'F') {
+            const segment = stackedData.find(d => d.key === item.name);
+            const segmentData = segment[0];
+            svg.append("circle")
+              .attr("cx", xScale('Total') + xScale.bandwidth() / 2)
+              .attr("cy", yScale((segmentData[0] + segmentData[1]) / 2))
+              .attr("r", 5)
+              .attr("fill", "black");
+          }
+        });
+
+        // Add the X Axis
+        svg.append("g")
+          .attr("transform", `translate(0,${height - bottomMargin})`)
+          .call(d3.axisBottom(xScale));
+
+        // Add the Y Axis
+        svg.append("g")
+          .attr("transform", `translate(${leftMargin},0)`);
+      });
+    </script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

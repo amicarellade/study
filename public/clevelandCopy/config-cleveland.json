@@ -23,63 +23,15 @@
         "sidebar": true
     },
     "baseComponents": {
-        "bubbleChart": {
-            "description": "A bubble chart with correct answer of 0.66",
-            "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
-            "type": "react-component",
-            "path": "cleveland/BubbleChart.tsx",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": "30"
-                    },
-                    {
-                        "name": "B",
-                        "value": "40"
-                    },
-                    {
-                        "name": "C",
-                        "value": "50"
-                    },
-                    {
-                        "name": "D",
-                        "value": "40"
-                    },
-                    {
-                        "name": "E",
-                        "value": "60"
-                    }
-                ],
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            },
-            "response": [
-                {
-                    "id": "cm-response",
-                    "prompt": "Answer:",
-                    "required": true,
-                    "location": "sidebar",
-                    "type": "numerical",
-                    "placeholder": "0-100",
-                    "max": 100,
-                    "min": 0
-                }
-            ],
-            "nextButtonLocation": "sidebar",
-            "instructionLocation": "sidebar"
-        },
         "stackedBarChart": {
             "meta": {
                 "difficulty": 5,
                 "chart": "stacked bar"
             },
-            "description": "A chart with correct answer of 0.66",
+            "description": "A chart with correct answer of 0.50",
             "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
-            "type": "react-component",
-            "path": "cleveland/StackedBarChart.tsx",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar1.html",
             "parameters": {
                 "data": [
                     {
@@ -88,24 +40,28 @@
                     },
                     {
                         "name": "B",
-                        "value": "40"
+                        "value": "15"
                     },
                     {
                         "name": "C",
-                        "value": "50"
+                        "value": "5"
                     },
                     {
                         "name": "D",
-                        "value": "40"
+                        "value": "25"
                     },
                     {
                         "name": "E",
-                        "value": "60"
+                        "value": "10"
+                    },
+                    {
+                        "name": "F",
+                        "value": "15"
                     }
                 ],
                 "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    5
                 ]
             },
             "response": [
@@ -128,10 +84,10 @@
                 "difficulty": 5,
                 "chart": "Bar"
             },
-            "description": "A chart with correct answer of 0.66",
+            "description": "A bar chart with correct answer of 0.5",
             "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
-            "type": "react-component",
-            "path": "cleveland/BarChart.tsx",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot1.html",
             "parameters": {
                 "data": [
                     {
@@ -140,24 +96,28 @@
                     },
                     {
                         "name": "B",
-                        "value": "40"
+                        "value": "15"
                     },
                     {
                         "name": "C",
-                        "value": "50"
+                        "value": "5"
                     },
                     {
                         "name": "D",
-                        "value": "40"
+                        "value": "25"
                     },
                     {
                         "name": "E",
-                        "value": "60"
+                        "value": "10"
+                    },
+                    {
+                        "name": "F",
+                        "value": "15"
                     }
                 ],
                 "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    5
                 ]
             },
             "response": [
@@ -178,12 +138,12 @@
         "pieChart": {
             "meta": {
                 "difficulty": 5,
-                "chart": "pie"
+                "chart": "Pie"
             },
-            "description": "Pie chart",
+            "description": "Pie chart with correct answer of .50",
             "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
-            "type": "react-component",
-            "path": "cleveland/PieChart.tsx",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart1.html",
             "parameters": {
                 "data": [
                     {
@@ -192,24 +152,28 @@
                     },
                     {
                         "name": "B",
-                        "value": "40"
+                        "value": "15"
                     },
                     {
                         "name": "C",
-                        "value": "50"
+                        "value": "5"
                     },
                     {
                         "name": "D",
-                        "value": "40"
+                        "value": "25"
                     },
                     {
                         "name": "E",
-                        "value": "60"
+                        "value": "10"
+                    },
+                    {
+                        "name": "F",
+                        "value": "15"
                     }
                 ],
                 "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    5
                 ]
             },
             "response": [
@@ -354,13 +318,7 @@
                     0,
                     1
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
+            }
         },
         "treeMap2":{
             "baseComponent": "treeMap",
@@ -372,13 +330,7 @@
                     0,
                     2
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 16
-                }
-            ]
+            }
         },
         "treeMap3":{
             "baseComponent": "treeMap",
@@ -390,13 +342,7 @@
                     0,
                     3
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 83
-                }
-            ]
+            }
         },
         "treeMap4":{
             "baseComponent": "treeMap",
@@ -408,13 +354,7 @@
                     4,
                     5
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
+            }
         },
         "treeMap5":{
             "baseComponent": "treeMap",
@@ -426,171 +366,117 @@
                     2,
                     3
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 20
-                }
-            ]
+            }
         },
-        "trainingBubbleChart1": {
-            "baseComponent": "bubbleChart",
-            "description": "A bubble chart with correct answer of 0.66",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
-        },
-        "trainingStackedBarChart1": {
+        "StackedBarChart1": {
             "baseComponent": "stackedBarChart",
+            "description": "Stacked bar with CA of .5",
             "parameters": {
                 "selectedIndices": [
-                    1,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
-        },
-        "trainingBarChart1": {
-            "baseComponent": "barChart",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
-        },
-        "trainingPieChart1": {
-            "baseComponent": "pieChart",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
-        },
-        "bubbleChart1": {
-            "baseComponent": "bubbleChart",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    5
                 ]
             }
         },
-        "stackedBarChart1": {
+        "StackedBarChart2": {
             "baseComponent": "stackedBarChart",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar2.html",
+            "description": "Stacked bar with CA of .5",
             "parameters": {
                 "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    1
                 ]
             }
         },
-        "stackedBarChart2": {
+        "StackedBarChart3": {
             "baseComponent": "stackedBarChart",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar3.html",
+            "description": "Stacked bar with CA of .166",
             "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": "10"
-                    },
-                    {
-                        "name": "B",
-                        "value": "20"
-                    },
-                    {
-                        "name": "C",
-                        "value": "40"
-                    },
-                    {
-                        "name": "D",
-                        "value": "50"
-                    },
-                    {
-                        "name": "E",
-                        "value": "100"
-                    }
-                ],
                 "selectedIndices": [
-                    1,
-                    4
+                    0,
+                    2
+                ]
+            }
+        },
+        "StackedBarChart4": {
+            "baseComponent": "stackedBarChart",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar4.html",
+            "description": "Stacked bar with CA of .833",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    3
+                ]
+            }
+        },
+        "StackedBarChart5": {
+            "baseComponent": "stackedBarChart",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar5.html",
+            "description": "Stacked bar with CA of .333",
+            "parameters": {
+                "selectedIndices": [
+                    4,
+                    5
+                ]
+            }
+        },
+        "StackedBarChart6": {
+            "baseComponent": "stackedBarChart",
+            "type": "website",
+            "path": "clevelandCopy/stackedBarCharts/StackedBar6.html",
+            "description": "Stacked bar with CA of .2",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    3
                 ]
             }
         },
         "barChart1": {
             "baseComponent": "barChart",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            }
-        },
-        "pieChart1": {
-            "baseComponent": "pieChart",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            }
-        },
-        "bubbleChart2": {
-            "baseComponent": "bubbleChart",
+            "description": "Bar with CA of .5",
             "parameters": {
                 "selectedIndices": [
                     0,
-                    3
-                ]
-            }
-        },
-        "stackedBarChart3": {
-            "baseComponent": "stackedBarChart",
-            "parameters": {
-                "selectedIndices": [
-                    0,
-                    3
-                ]
-            }
-        },
-        "stackedBarChart4": {
-            "baseComponent": "stackedBarChart",
-            "parameters": {
-                "selectedIndices": [
-                    0,
-                    3
+                    5
                 ]
             }
         },
         "barChart2": {
             "baseComponent": "barChart",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot2.html",
+            "description": "Bar with CA of .5",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "barChart3": {
+            "baseComponent": "barChart",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot3.html",
+            "description": "Bar with CA of .166",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    2
+                ]
+            }
+        },
+        "barChart4": {
+            "baseComponent": "barChart",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot4.html",
+            "description": "Bar with CA of .833",
             "parameters": {
                 "selectedIndices": [
                     0,
@@ -598,11 +484,96 @@
                 ]
             }
         },
-        "pieChart2": {
+        "barChart5": {
+            "baseComponent": "barChart",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot5.html",
+            "description": "Bar with CA of .333",
+            "parameters": {
+                "selectedIndices": [
+                    4,
+                    5
+                ]
+            }
+        },
+        "barChart6": {
+            "baseComponent": "barChart",
+            "type": "website",
+            "path": "clevelandCopy/barCharts/BarPlot6.html",
+            "description": "Bar with CA of .2",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    3
+                ]
+            }
+        },
+        "pieChart1": {
             "baseComponent": "pieChart",
+            "description": "Pie with CA of .5",
             "parameters": {
                 "selectedIndices": [
                     0,
+                    5
+                ]
+            }
+        },
+        "pieChart2": {
+            "baseComponent": "pieChart",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart2.html",
+            "description": "Pie with CA of .5",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "pieChart3": {
+            "baseComponent": "pieChart",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart3.html",
+            "description": "Pie with CA of .166",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    2
+                ]
+            }
+        },
+        "pieChart4": {
+            "baseComponent": "pieChart",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart4.html",
+            "description": "Pie with CA of .833",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    3
+                ]
+            }
+        },
+        "pieChart5": {
+            "baseComponent": "pieChart",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart5.html",
+            "description": "Pie with CA of .333",
+            "parameters": {
+                "selectedIndices": [
+                    4,
+                    5
+                ]
+            }
+        },
+        "pieChart6": {
+            "baseComponent": "pieChart",
+            "type": "website",
+            "path": "clevelandCopy/pieCharts/PieChart6.html",
+            "description": "Pie with CA of .2",
+            "parameters": {
+                "selectedIndices": [
+                    2,
                     3
                 ]
             }
@@ -617,11 +588,11 @@
             "trainingTreeMap1",
             {
                 "order": "random",
-                "numSamples": 30,
+                "numSamples": 20,
                 "components": [
                     {
                         "order": "random",
-                        "numSamples": 10,
+                        "numSamples": 5,
                         "components": [
                             "treeMap1",
                             "treeMap2",
@@ -632,24 +603,38 @@
                     },
                     {
                         "order": "random",
-                        "numSamples": 10,
+                        "numSamples": 5,
                         "components": [
-                            "pieChart1",
-                            "pieChart2",
-                            "pieChart3",
-                            "pieChart4",
-                            "pieChart5"
+                            "PieChart1",
+                            "PieChart2",
+                            "PieChart3",
+                            "PieChart4",
+                            "PieChart5",
+                            "PieChart6"
                         ]
                     },
                     {
                         "order": "random",
-                        "numSamples": 10,
+                        "numSamples": 5,
                         "components": [
-                            "barChart1",
-                            "barChart2",
-                            "barChart3",
-                            "barChart4",
-                            "barChart5"
+                            "BarPlot1",
+                            "BarPlot2",
+                            "BarPlot3",
+                            "BarPlot4",
+                            "BarPlot5",
+                            "BarPlot6"
+                        ]
+                    },
+                    {
+                        "order": "random",
+                        "numSamples": 5,
+                        "components": [
+                            "StackedBar1",
+                            "StackedBar2",
+                            "StackedBar3",
+                            "StackedBar4",
+                            "StackedBar5",
+                            "StackedBar6"
                         ]
                     }
                 ]
