@@ -605,36 +605,36 @@
                         "order": "random",
                         "numSamples": 5,
                         "components": [
-                            "PieChart1",
-                            "PieChart2",
-                            "PieChart3",
-                            "PieChart4",
-                            "PieChart5",
-                            "PieChart6"
+                            "pieChart1",
+                            "pieChart2",
+                            "pieChart3",
+                            "pieChart4",
+                            "pieChart5",
+                            "pieChart6"
                         ]
                     },
                     {
                         "order": "random",
                         "numSamples": 5,
                         "components": [
-                            "BarPlot1",
-                            "BarPlot2",
-                            "BarPlot3",
-                            "BarPlot4",
-                            "BarPlot5",
-                            "BarPlot6"
+                            "barChart1",
+                            "barChart2",
+                            "barChart3",
+                            "barChart4",
+                            "barChart5",
+                            "barChart6"
                         ]
                     },
                     {
                         "order": "random",
                         "numSamples": 5,
                         "components": [
-                            "StackedBar1",
-                            "StackedBar2",
-                            "StackedBar3",
-                            "StackedBar4",
-                            "StackedBar5",
-                            "StackedBar6"
+                            "StackedBarChart1",
+                            "StackedBarChart2",
+                            "StackedBarChart3",
+                            "StackedBarChart4",
+                            "StackedBarChart5",
+                            "StackedBarChart6"
                         ]
                     }
                 ]
